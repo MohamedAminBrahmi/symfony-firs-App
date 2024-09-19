@@ -10,13 +10,13 @@ class HomeController extends AbstractController
 {
     #[Route('/',name:'app_home')]
     public function index() : Response {
-        return $this->render('home.html.twig');
+        return $this->render('home/home.html.twig');
         
     } 
-    
+
     #[Route('/contact',name:'app_contact')]
     public function contact() : Response {
-        return $this->render('contact.html.twig');
+        return $this->render('home/contact.html.twig');
         
     } 
 }
