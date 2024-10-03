@@ -1,0 +1,34 @@
+<html>
+<head>
+</head>
+    <body>
+    <h2>Authors List Page </h2>
+    {% set total_books = 0 %}
+    {% if authors is defined and authors is not empty  %}
+        
+ 
+   
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Picture</th>
+            <th>Number of Books</th>
+
+
+        </tr>
+        <tr {% for author in authors %}>
+        {% set total_books = total_books + author.nbrBooks %}
+            <td>{{author.authorName}}</td>
+            <td><img src="{{asset(author.picture)}}"></td>
+            <td>{{author.nbrBooks}}</td>
+
+
+        </tr {% endfor %}>
+    </table>
+        <h2>the nbr of authors : {{ authors|length }}, the nbr of books : {{total_books}}</h2>
+
+    {% else %}
+        <h2>the list is empty</h2>
+    {% endif %}
+    </body>
+</html>
