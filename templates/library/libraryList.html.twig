@@ -1,0 +1,31 @@
+<html>
+<header>
+</header>
+<body>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Wed Site</th>
+            <th>Date Creation</th>
+
+           
+
+
+        </tr>
+        <tr {% for lib in list %}>
+            <td>{{lib.id}}</td>
+            <td>{{lib.name}}</td>
+            <td>{{lib.webSite}}</td>
+            <td>{{lib.dateCreation|date}}</td>
+           
+
+
+
+        </tr {% endfor %}>
+    </table>
+</body>
+
+
+
+</html>

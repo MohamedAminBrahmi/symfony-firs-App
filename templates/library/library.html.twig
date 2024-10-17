@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Create/Update Library</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Create/Update Library</h1>
+
+        <form action="{{ path('app_crud_create') }}" method="POST"> 
+            <div>
+                <label for="name">Library Name</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+
+            <div>
+                <label for="webSite">Library Website</label>
+                <input type="text" id="webSite" name="webSite" class="form-control" required>
+            </div>
+
+            <div>
+                <label for="dateCreation">Date of Creation</label>
+                <input type="date" id="dateCreation" name="dateCreation" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
